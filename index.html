@@ -1,28 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Scrubia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrubia | Aliados en Uniformes Médicos</title>
+  <!-- Tailwind CSS vía CDN para prototipado rápido; cámbialo por tu build local en producción -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Estilos personalizados opcionales -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-    <header>
-        <h1>Scrubia</h1>
-        <p>Lorem</p>
-    </header>
-    <main>
-        <section>
-            <h2>¿Quiénes somos?</h2>
-            <p>En Scrubia confeccionamos uniformes médicos cómodos, resistentes y con identidad. Diseñados para profesionales de la salud que no quieren verse como todos los demás.</p>
-        </section>
-        <section>
-            <h2>Contáctanos</h2>
-            <p>Escríbenos a <a href="mailto:contacto@scrubia.online">contacto@scrubia.online</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Scrubia. Todos los derechos reservados.</p>
-    </footer>
+<body class="font-sans antialiased text-gray-800">
+  <!-- ======= Barra de navegación ======= -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="#" class="text-2xl font-bold text-blue-700">Scrubia</a>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#catalogo" class="hover:text-blue-700">Catálogo</a>
+        <a href="#programa-aliados" class="hover:text-blue-700">Aliados</a>
+        <a href="#contacto" class="hover:text-blue-700">Contacto</a>
+      </nav>
+      <a href="#programa-aliados" class="md:hidden inline-block bg-blue-700 text-white px-4 py-2 rounded-lg">Aliados</a>
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section class="bg-[url('assets/hero-bg.jpg')] bg-cover bg-center text-white py-24" id="home">
+    <div class="container mx-auto text-center px-4 max-w-3xl">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Conviértete en aliado de Scrubia</h1>
+      <p class="text-lg md:text-xl mb-8">Una oportunidad rentable para profesionales y emprendedores del sector salud</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#programa-aliados" class="bg-blue-700 hover:bg-blue-800 transition text-white px-6 py-3 rounded-lg font-semibold">Quiero ser aliado</a>
+        <a href="#catalogo" class="bg-white/10 hover:bg-white/20 transition text-white px-6 py-3 rounded-lg font-semibold border border-white">Ver catálogo</a>
+      </div>
+      <!-- Beneficios rápidos -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <div class="backdrop-blur bg-white/10 p-6 rounded-2xl">
+          <h3 class="text-xl font-bold mb-2">Hasta 40 % de ganancia</h3>
+          <p>Márgenes competitivos para maximizar tus ingresos.</p>
+        </div>
+        <div class="backdrop-blur bg-white/10 p-6 rounded-2xl">
+          <h3 class="text-xl font-bold mb-2">Envíos a todo México</h3>
+          <p>Recibe tus pedidos en cualquier estado de la República.</p>
+        </div>
+        <div class="backdrop-blur bg-white/10 p-6 rounded-2xl">
+          <h3 class="text-xl font-bold mb-2">Calidad y personalización</h3>
+          <p>Uniformes premium con opciones de bordado a medida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Catálogo ======= -->
+  <section id="catalogo" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Catálogo</h2>
+      <!-- Filtros (placeholder) -->
+      <div id="catalog-filters" class="flex flex-wrap gap-4 justify-center mb-10">
+        <!-- Generados dinámicamente con JS -->
+      </div>
+      <!-- Grid de productos -->
+      <div id="catalog-grid" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Tarjetas de producto serán inyectadas aquí por catalogo.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Programa de Aliados ======= -->
+  <section id="programa-aliados" class="py-20">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-8">Programa para emprendedores – Aliados Scrubia</h2>
+      <p class="text-lg mb-6 text-center">Impulsa tu negocio ofreciendo uniformes médicos de alta calidad con márgenes competitivos y soporte integral.</p>
+      <!-- Pasos -->
+      <ol class="space-y-8">
+        <li class="p-6 bg-white shadow rounded-2xl">
+          <h3 class="text-xl font-semibold mb-2">1. Regístrate</h3>
+          <p>Llena el formulario para convertirte en aliado y recibir precios preferenciales.</p>
+        </li>
+        <li class="p-6 bg-white shadow rounded-2xl">
+          <h3 class="text-xl font-semibold mb-2">2. Selecciona tu inventario</h3>
+          <p>Elige tus prendas iniciales y obtén materiales de marketing gratuitos.</p>
+        </li>
+        <li class="p-6 bg-white shadow rounded-2xl">
+          <h3 class="text-xl font-semibold mb-2">3. Promociona y vende</h3>
+          <p>Ofrece los uniformes entre colegas, clínicas y hospitales, o en línea.</p>
+        </li>
+        <li class="p-6 bg-white shadow rounded-2xl">
+          <h3 class="text-xl font-semibold mb-2">4. ¡Gana dinero!</h3>
+          <p>Cobra a tus clientes y conserva hasta el 40 % de ganancia.</p>
+        </li>
+      </ol>
+      <div class="text-center mt-10">
+        <a href="/programa-emprendedores" class="bg-blue-700 hover:bg-blue-800 transition text-white px-8 py-4 rounded-lg font-semibold">Únete ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Contacto ======= -->
+  <section id="contacto" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-xl">
+      <h2 class="text-3xl font-bold text-center mb-8">Contacto</h2>
+      <form name="contacto" method="POST" data-netlify="true" class="space-y-6">
+        <input type="hidden" name="form-name" value="contacto" />
+        <input type="text" name="nombre" placeholder="Nombre" required class="w-full p-3 rounded-lg border" />
+        <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded-lg border" />
+        <textarea name="mensaje" rows="5" placeholder="Mensaje" required class="w-full p-3 rounded-lg border"></textarea>
+        <button type="submit" class="bg-blue-700 hover:bg-blue-800 transition text-white w-full py-3 rounded-lg font-bold">Enviar</button>
+      </form>
+      <div class="text-center mt-8">
+        <a href="https://wa.me/521XXXXXXXXXX" class="inline-flex items-center gap-2 text-blue-700 hover:underline"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5.882C3 4.843 3.843 4 4.882 4h14.235C20.157 4 21 4.843 21 5.882v12.235C21 19.157 20.157 20 19.118 20H4.882A1.882 1.882 0 013 18.118V5.882z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 2v4M8 2v4m-1 5h10M7 15h10" /></svg>Chatea con nosotros</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer class="bg-gray-900 text-gray-300 py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">© 2025 Scrubia. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ======= Scripts ======= -->
+  <script src="js/catalogo.js"></script>
 </body>
 </html>
